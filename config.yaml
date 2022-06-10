@@ -27,7 +27,17 @@ monitors:
   - id: Retail Portal
     name: Retail FRS Portal
     description: 'Portal for service station FRS incident management.'
-    url: 'https://portal.scancam.com.au'
+    url: 'https://portal.scancam.com.au/'
     method: GET
+    followRedirect: true # should fetch follow redirects, default=false
+    expectStatus: 200
+    linkable: true # allows the title to be a link, default=true
+    
+  - id: sci-frs-payments
+    name: Fuel Recovery Services Payment Gateway
+    description: 'FRS portal for outstanding incident payments.'
+    url: 'https://fuelrecoveryservices.com.au/'
+    method: GET
+    followRedirect: true # should fetch follow redirects, default=false
     expectStatus: 200
     linkable: true # allows the title to be a link, default=true
